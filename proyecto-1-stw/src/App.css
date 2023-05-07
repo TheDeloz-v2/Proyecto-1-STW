@@ -6,9 +6,9 @@
 body {
   font-family: 'Familjen Grotesk';
   background: #000;
-  color: #fff;
   text-transform: uppercase;
   outline: red dashed 1px;
+  display: block;
 }
 
 a {
@@ -30,7 +30,7 @@ ul {
   z-index: 3;
   display: flex;
   align-items: center;
-  height: 100px;
+  height: 99px;
 }
 
 /* Logo */
@@ -61,8 +61,8 @@ ul {
 .navbar ul li {
   outline: red dashed 1px;
   position: relative;
-  margin-right: 30px;
-  font-size: 13.5px;
+  margin-right: 28px;
+  font-size: 14px;
   font-weight: bold;
 }
 
@@ -222,11 +222,17 @@ ul {
 }
 
 footer{
-  padding: 50px;
+  padding-top: 50px;
+  padding-bottom: 20px;
   font-size: 12px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #000;
   font-family: D-DIN-Regular, sans-serif;
 }
 footer nav{
+  outline: red dashed 1px;
   text-align: center;
 }
 footer nav span{
@@ -243,4 +249,67 @@ footer nav a{
 }
 footer nav a:hover{
   color: #aaa;
+}
+
+section div.content-outer{
+  outline: red dashed 1px;
+  flex-grow: 1;
+  display: row;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+section div.content{
+  outline: red dashed 1px;
+  position: absolute;
+  left: 50px;
+  max-width: 550px;
+  bottom:18vh;
+}
+
+section div.content h2{
+  outline: red dashed 1px;
+  margin: 0 0 0;
+  font-size: 49px;
+}
+
+section div.content p{
+  outline: red dashed 1px;
+  margin: 0 0 20px;
+  font-size: 22px;
+}
+
+section div.content a{
+  border: 2px solid #fff;
+  display: inline-block;
+  padding: 20px 50px;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  position:relative;
+}
+section div.content a:before{
+  content:'';
+  display: block;
+  width:100%;
+  position: absolute;
+  top:0;
+  left:0;
+  height:0;
+  transition: height 0.3s ease-in-out;
+  background-color:white;
+}
+section div.content a:hover:before{
+  height:100%;
+  top:initial;
+  bottom:0;
+}
+section div.content a span{
+  position: relative;
+  z-index: 1;
+  transition:color .3s ease-in-out;
+}
+section div.content a:hover span{
+  color:#000;
 }
