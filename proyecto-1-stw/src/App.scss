@@ -8,7 +8,7 @@ body {
   font-family: 'Familjen Grotesk';
   background: #000;
   text-transform: uppercase;
-  outline: red dashed 1px;
+   
   display: block;
 }
 
@@ -26,7 +26,7 @@ ul {
   */
 
 .header {
-  outline: red dashed 1px;
+   
   position: fixed;
   width: 100%;
   z-index: 3;
@@ -46,7 +46,7 @@ ul {
 
 .logo {
   padding-left: 7%;
-  outline: red dashed 1px;
+   
   width: 206px;
   height: auto;
 
@@ -121,14 +121,14 @@ ul {
   */
 
 .navbar {
-  outline: red dashed 1px;
+   
 
   ul {
-    outline: red dashed 1px;
+     
     display: flex;
 
     li {
-      outline: red dashed 1px;
+       
       position: relative;
       margin-right: 28px;
       font-size: 14px;
@@ -226,18 +226,18 @@ ul {
 /* Hamburger Menu */
 
 .navbar-right {
-  outline: red dashed 1px;
+   
   position: relative;
   width: fit-content;
   display: flex;
   margin-left: 160px;
   
   ul {
-    outline: red dashed 1px;
+     
     display: flex;
 
     li {
-      outline: red dashed 1px;
+       
       position: relative;
       margin-right: 28px;
       font-size: 14px;
@@ -280,7 +280,7 @@ ul {
 }
 
 .hamburger {
-  outline: red dashed 1px;
+   
   position: fixed;
   z-index: 3;
   right: 35px;
@@ -326,7 +326,7 @@ ul {
 }
 
 nav.mobile-nav {
-  outline: red dashed 1px;
+   
   padding-top: 80px;
   display: inline-block;
   position: fixed;
@@ -340,13 +340,13 @@ nav.mobile-nav {
   transition: right 0.3s ease-in-out;
 
   &.active {
-    outline: red dashed 1px;
+     
     display: inline-block;
     right: 0;
   }
 
   a {
-    outline: red dashed 1px;
+     
     display: block;
     justify-items: center;
     opacity: 0;
@@ -363,7 +363,7 @@ nav.mobile-nav {
   }
 
   &.active a {
-    outline: red dashed 1px;
+     
     opacity: 1;
   }
 
@@ -458,7 +458,7 @@ footer {
   background-color: #000;
 
   nav {
-    outline: red dashed 1px;
+     
     text-align: center;
 
     span {
@@ -488,7 +488,7 @@ section {
   }
 
   div.content-outer {
-    outline: red dashed 1px;
+     
     flex-grow: 1;
     max-width: 1400px;
     margin: 0 auto;
@@ -501,7 +501,7 @@ section {
   }
 
   div.content {
-    outline: red dashed 1px;
+     
     position: absolute;
     left: 50px;
     opacity: 0;
@@ -510,13 +510,13 @@ section {
     transition: all .5s linear;
 
     h2 {
-      outline: red dashed 1px;
+       
       margin: 0 0 10px 0;
       font-size: 49px;
     }
 
     p {
-      outline: red dashed 1px;
+       
       margin: 0;
       font-size: 22px;
     }
