@@ -68,14 +68,15 @@ function Header() {
           <span />
           <span />
         </button>
-        <nav className={`mobile-nav ${isMobileNavOpen ? "active" : ""}`} style={{ right: isMobileNavOpen ? "0" : "-280px" }}>
-          <a href="index.html">Mission</a>
-          <a href="index.html">Launches</a>
-          <a href="index.html">Careers</a>
-          <a href="index.html">Updates</a>
-          <a href="index.html">Shop</a>
         </nav>
+      <nav className={`mobile-nav ${isMobileNavOpen ? "active" : ""}`} style={{ right: isMobileNavOpen ? "0" : "-280px" }}>
+        <a href="index.html">Mission</a>
+        <a href="index.html">Launches</a>
+        <a href="index.html">Careers</a>
+        <a href="index.html">Updates</a>
+        <a href="index.html">Shop</a>
       </nav>
+      
       
     </header>
   );
