@@ -8,8 +8,21 @@ function Header() {
     setIsMobileNavOpen(!isMobileNavOpen);
   };
 
+  const [showHeader, setShowHeader] = useState(true);
+  var prevScrollpos = window.pageYOffset;
+
+  window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      setShowHeader(true);
+    } else {
+      setShowHeader(false);
+    }
+    prevScrollpos = currentScrollPos;
+  }
+
   return (
-    <header className="header">
+    <header className={`header ${showHeader ? "" : "header-hidden"}`}>
       <div className="logo">
         <a href="index.html">
           <img src={logo} alt="SpaceX" />
