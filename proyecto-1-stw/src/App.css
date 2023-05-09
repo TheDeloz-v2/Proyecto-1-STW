@@ -3,6 +3,7 @@
 /*
   General
   */
+  
 body {
   font-family: 'Familjen Grotesk';
   background: #000;
@@ -133,37 +134,136 @@ ul {
 }
 
 /* Hamburger Menu */
-.hamburger {
-  position: fixed;
-  top: 40px;
-  right: 20px;
-  z-index: 10;
+  .navbar-right {
+    outline: red dashed 1px;
+    position: relative;
+    left: 150px;
+  }
+  
+  .navbar-right ul {
+    outline: red dashed 1px;
+    display: flex;
+  }
+  
+  .navbar-right ul li {
+    outline: red dashed 1px;
+    margin-right: 28px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  /* 
+    Menu item
+    */
+  .navbar-right ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.5px;
+    background: #fff;
+    transform: scaleX(0);
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    transform-origin: right center;
+  }
+  
+  .navbar-right ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+    transition-duration: 0.4s;
+  }
+  
+
+@media (min-width: 1000px) {
+  .right-nav a{
+      display:inline-block;
+      padding: 0;
+      margin: 0 50px;
+  }
+}
+.hamburger{
+  outline: red dashed 1px;
+  position:fixed;
+  z-index: 3;
+  right:35px;
+  top:23px;
+  color:#fff;
+  padding: 20px;
+  background-color:transparent;
+  border:0;
   cursor: pointer;
-  width: 20px;
-  height: 20px;
-  background: none;
-  border: none;
 }
-
-.hamburger-top,
-.hamburger-middle,
-.hamburger-bottom {
-  position: absolute;
-  width: 20px;
+.hamburger span{
+  display:block;
+  width: 16px;
+  margin: 2px 0;
   height: 2px;
-  top: 0;
-  left: 0;
-  background: #fff;
-  transition: all 0.5s;
+  background-color:#fff;
+  position: relative;
+  transition: all 0.2s linear;
 }
-
-.hamburger-middle {
-  transform: translateY(5px);
+.hamburger.active span:first-child,
+.hamburger.active span:nth-child(2){
+  transform: rotate(45deg);
 }
-
-.hamburger-bottom {
-  transform: translateY(10px);
+.hamburger.active span:nth-child(2){
+  transform: rotate(-45deg);
+  top: -4px;
 }
+.hamburger.active span:last-child{
+  opacity: 0;
+}
+.shadow.active{
+  position: fixed;
+  inset:0;
+  background-color:rgba(0,0,0,.5);
+  z-index: 1;
+}
+nav.mobile-nav{
+  outline: red dashed 1px;
+  padding-top: 80px;
+  display:inline-block;
+  position:fixed;
+  justify-content: center;
+  top:0;
+  bottom:0;
+  z-index: 2;
+  width: 280px;
+  background-color:#000;
+  margin-left: 100px;
+  transition: right 0.3s ease-in-out;
+}
+nav.mobile-nav.active{
+  outline: red dashed 1px;
+  display:inline-block;
+  right:0;
+}
+nav.mobile-nav a{
+  outline: red dashed 1px;
+  display:block;
+  justify-items: center;
+  opacity: 0;
+  width: 60%;
+  border-bottom: 1px solid #222;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 75px;
+  text-decoration: none;
+  font-size: 15px;
+  text-align: right;
+  transition: opacity .3s linear;
+  transition-delay: .2s;
+}
+nav.mobile-nav.active a{
+  outline: red dashed 1px;
+  opacity:1;
+}
+nav.mobile-nav a:nth-child(2){transition-delay: .25s;}
+nav.mobile-nav a:nth-child(3){transition-delay: .3s;}
+nav.mobile-nav a:nth-child(4){transition-delay: .35s;}
+nav.mobile-nav a:nth-child(5){transition-delay: .4s;}
+nav.mobile-nav a:nth-child(6){transition-delay: .45s;}
 
 /* Overlay */
 .overlay-show {
@@ -222,27 +322,26 @@ ul {
 }
 
 footer{
-  padding-top: 50px;
-  padding-bottom: 20px;
+  padding-top: 17px;
+  padding-bottom: 17px;
   font-size: 12px;
   justify-content: center;
   align-items: center;
   text-align: center;
   background-color: #000;
-  font-family: D-DIN-Regular, sans-serif;
 }
 footer nav{
   outline: red dashed 1px;
   text-align: center;
 }
 footer nav span{
-  color: #777;
+  color: #ffffff;
   display: inline-block;
   padding-right: 30px;
   text-transform: uppercase;
 }
 footer nav a{
-  padding: 0 20px;
+  padding: 0 15px;
   text-decoration: none;
   font-weight: bold;
   transition: color .2s linear;
@@ -251,32 +350,43 @@ footer nav a:hover{
   color: #aaa;
 }
 
+section.active div.content{
+  opacity: 1;
+  bottom:15vh;
+}
+
 section div.content-outer{
   outline: red dashed 1px;
   flex-grow: 1;
-  display: row;
   max-width: 1400px;
   margin: 0 auto;
   position: relative;
+}
+
+section.active div.content{
+  opacity: 1;
+  bottom:15vh;
 }
 
 section div.content{
   outline: red dashed 1px;
   position: absolute;
   left: 50px;
+  opacity:0;
   max-width: 550px;
-  bottom:18vh;
+  bottom:10vh;
+  transition: all .5s linear;
 }
 
 section div.content h2{
   outline: red dashed 1px;
-  margin: 0 0 0;
+  margin: 0 0 10px 0 ;
   font-size: 49px;
 }
 
 section div.content p{
   outline: red dashed 1px;
-  margin: 0 0 20px;
+  margin: 0;
   font-size: 22px;
 }
 

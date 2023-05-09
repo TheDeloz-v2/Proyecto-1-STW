@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../images/logo-spacex.png";
 
 function Header() {
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+
+  const handleMobileNavClick = () => {
+    setIsMobileNavOpen(!isMobileNavOpen);
+  };
+
   return (
     <header className="header">
       <div className="logo">
@@ -33,15 +39,31 @@ function Header() {
             <a href="index.html">Starshield</a>
           </li>
           <li>
-            <a href="index.htmly">Starlink</a>
+            <a href="index.html">Starlink</a>
           </li>
         </ul>
       </nav>
-      <button id="menu-btn" className="hamburger" type="button">
-        <span className="hamburger-top"></span>
-        <span className="hamburger-middle"></span>
-        <span className="hamburger-bottom"></span>
-      </button>
+      <nav className="navbar-right">
+        <ul>
+          <li>
+            <a href="index.html">Shop</a>
+          </li>
+        </ul>
+        <div className={`shadow ${isMobileNavOpen ? "active" : ""}`} />
+        <button className={`hamburger ${isMobileNavOpen ? "active" : ""}`} onClick={handleMobileNavClick}>
+          <span />
+          <span />
+          <span />
+        </button>
+        <nav className={`mobile-nav ${isMobileNavOpen ? "active" : ""}`} style={{ right: isMobileNavOpen ? "0" : "-280px" }}>
+          <a href="index.html">Mission</a>
+          <a href="index.html">Launches</a>
+          <a href="index.html">Careers</a>
+          <a href="index.html">Updates</a>
+          <a href="index.html">Shop</a>
+        </nav>
+      </nav>
+      
     </header>
   );
 }
