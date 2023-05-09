@@ -8,7 +8,7 @@ Spacex - Es una empresa estadounidense de fabricación aeroespacial y de servici
 <br>
 
 ## Preview
-Click [aquí]().
+Click [aquí](https://stw-proyecto-1.vercel.app/).
 
 ## ¿Qué tecnologías se utilizaron en este proyecto?
 Este proyecto utiliza las siguientes tecnologías:
@@ -23,5 +23,6 @@ Este proyecto utiliza las siguientes tecnologías:
     Cada sección de la página se ha desarrollado como un componente individual. Se aprovecharon las funcionalidades de React para aplicarse en interacciones dentro de la página.
 - **SASS**: SASS se ha utilizado para el desarrollo de los estilos de la página.
  Se ha utilizado para poder aprovechar sus funciones de variables y su sistema de anidación de CSS, mejorando y facilitando el entendimiento de los estilos.
- - **Next.js**: Next.js se ha utilizado para el desarrollo de la página en general.
-  Se ha utilizado para poder aprovechar su función de SSR (*Server Side Rendering*) y así poder mostrar la página de manera más rápida.
+- **Next.js**: Next.js se ha utilizado para el desarrollo de la página en general.
+  Se ha utilizado para poder aprovechar su función de SSR (*Server Side Rendering*).
+- **Vercerl**: Vercel se ha utilizado como plataforma para construir, desplegar y compartir el proyecto.
